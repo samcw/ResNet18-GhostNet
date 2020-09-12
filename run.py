@@ -93,5 +93,5 @@ if __name__ == '__main__':
 
     print('Train has finished, total epoch is %d' % EPOCH)
 
-    dataframe = pd.DataFrame({'without': without})
+    dataframe = pd.DataFrame({'with': without})
     dataframe.to_csv('without.csv', index=False, sep=',')
