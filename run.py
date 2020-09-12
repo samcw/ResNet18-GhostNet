@@ -4,6 +4,7 @@ import torchvision
 import torchvision.transforms as transforms
 import torch
 import torch.nn as nn
+import pandas as pd
 
 #check gpu
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -13,6 +14,9 @@ EPOCH = 10
 pre_epoch = 0
 BATCH_SIZE = 128
 LR = 0.01
+
+# data array
+without = []
 
 if __name__ == '__main__':
     # prepare dataset and preprocessing
@@ -85,5 +89,9 @@ if __name__ == '__main__':
                 total += labels.size(0)
                 correct += (predicted == labels).sum()
             print('Test\'s ac is: %.3f%%' % (100 * correct / total))
+            without.append((100 * correct / total))
 
     print('Train has finished, total epoch is %d' % EPOCH)
+
+    dataframe = pd.DataFrame({'without': without})
+    dataframe.to_csv('without.csv', index=False, sep=',')
