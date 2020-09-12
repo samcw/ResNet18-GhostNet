@@ -1,4 +1,4 @@
-from resnet18 import ResNet18
+from ghostnet import ResNet18
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
