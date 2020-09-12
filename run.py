@@ -9,7 +9,7 @@ import torch.nn as nn
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 #set hyperparameter
-EPOCH = 10
+EPOCH = 50
 pre_epoch = 0
 BATCH_SIZE = 128
 LR = 0.01
