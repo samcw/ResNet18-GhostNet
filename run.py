@@ -1,4 +1,4 @@
-from ghostnet import ResNet18
+from resnet18 import ResNet18
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
@@ -10,7 +10,7 @@ import pandas as pd
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 #set hyperparameter
-EPOCH = 50
+EPOCH = 30
 pre_epoch = 0
 BATCH_SIZE = 128
 LR = 0.01

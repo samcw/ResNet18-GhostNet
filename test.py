@@ -1,7 +1,5 @@
-import pandas as pd
+import torch
 
-data = [1, 2, 3]
+data = torch.Tensor(1)
 
-dataframe = pd.DataFrame({'data': data})
-
-dataframe.to_csv('test.csv', index=False, sep=',')
+print(data.int())
