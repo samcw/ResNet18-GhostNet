@@ -10,7 +10,7 @@ import pandas as pd
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 #set hyperparameter
-EPOCH = 30
+EPOCH = 50
 pre_epoch = 0
 BATCH_SIZE = 128
 LR = 0.01
