@@ -25,8 +25,8 @@ class ResidualBlock(nn.Module):
     def forward(self, x):
         out = self.left(x)
         out = out + self.shortcut(x)
-       # out = F.relu(out)
-		out = out * F.sigmoid(out)
+        # out = F.relu(out)
+        out = out * F.sigmoid(out)
 
         return out
 
