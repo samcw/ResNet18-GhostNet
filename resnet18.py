@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from trick import Swish
 
 # 基础残差
 class ResidualBlock(nn.Module):
@@ -9,7 +10,8 @@ class ResidualBlock(nn.Module):
         self.left = nn.Sequential(
             nn.Conv2d(inchannel, outchannel, kernel_size=3, stride=stride, padding=1, bias=False),
             nn.BatchNorm2d(outchannel),
-            nn.ReLU(inplace=True),
+            # nn.ReLU(inplace=True),
+            Swish(),
             nn.Conv2d(outchannel, outchannel, kernel_size=3, stride=1, padding=1, bias=False),
             nn.BatchNorm2d(outchannel)
         )

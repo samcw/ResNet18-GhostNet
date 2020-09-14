@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f50b77c3-146b-4fe6-9a3d-6efa90206bdb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trick.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/with.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resnet18.py" beforeDir="false" afterPath="$PROJECT_DIR$/resnet18.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/without.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/without.csv" beforeDir="false" afterPath="$PROJECT_DIR$/without.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +64,10 @@
       <workItem from="1599826351842" duration="3865000" />
       <workItem from="1599892781795" duration="4591000" />
       <workItem from="1599898128915" duration="1479000" />
+      <workItem from="1599979062463" duration="3505000" />
+      <workItem from="1599987565290" duration="843000" />
+      <workItem from="1600065974242" duration="181000" />
+      <workItem from="1600070202376" duration="1270000" />
     </task>
     <servers />
   </component>
