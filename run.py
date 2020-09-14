@@ -94,4 +94,4 @@ if __name__ == '__main__':
     print('Train has finished, total epoch is %d' % EPOCH)
 
     dataframe = pd.DataFrame({'with': without})
-    dataframe.to_csv('with.csv', index=False, sep=',')
+    dataframe.to_csv('withswish.csv', index=False, sep=',')

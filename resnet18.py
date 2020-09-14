@@ -25,7 +25,8 @@ class ResidualBlock(nn.Module):
     def forward(self, x):
         out = self.left(x)
         out = out + self.shortcut(x)
-        out = F.relu(out)
+       # out = F.relu(out)
+		out = out * F.sigmoid(out)
 
         return out
 
@@ -37,7 +38,8 @@ class ResNet(nn.Module):
         self.conv1 = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False),
             nn.BatchNorm2d(64),
-            nn.ReLU()
+            #nn.ReLU()
+			Swish()
         )
         self.layer1 = self.make_layer(ResidualBlock, 64, 2, stride=1)
         self.layer2 = self.make_layer(ResidualBlock, 128, 2, stride=2)
