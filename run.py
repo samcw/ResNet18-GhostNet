@@ -88,7 +88,7 @@ if __name__ == '__main__':
                 _, predicted = torch.max(outputs.data, 1)
                 total += labels.size(0)
                 correct += (predicted == labels).sum()
-            print('Test\'s ac is: %.3f%%' % (100 * correct / total))
+            print('Test\'s ac is: %.3f%%' % (100. * float(correct) / total))
             without.append((100 * correct / total))
 
     print('Train has finished, total epoch is %d' % EPOCH)
