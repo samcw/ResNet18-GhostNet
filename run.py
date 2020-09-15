@@ -13,7 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 EPOCH = 50
 pre_epoch = 0
 BATCH_SIZE = 128
-LR = 0.01
+LR = 0.001
 
 # data array
 without = []
