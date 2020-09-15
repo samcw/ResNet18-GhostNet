@@ -12,8 +12,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #set hyperparameter
 EPOCH = 50
 pre_epoch = 0
-BATCH_SIZE = 128
-LR = 0.001
+BATCH_SIZE = 256
+LR = 0.01
 
 # data array
 without = []
@@ -73,7 +73,7 @@ if __name__ == '__main__':
             total += labels.size(0)
             correct += predicted.eq(labels.data).cpu().sum()
             print('[epoch:%d, iter:%d] Loss: %.03f | Acc: %.3f%% '
-                  % (epoch + 1, (i + 1 + epoch * length), sum_loss / (i + 1), 100. * correct / total))
+                  % (epoch + 1, (i + 1 + epoch * length), sum_loss / (i + 1), (100. * float(correct) / total)))
 
         # get the ac with testdataset in each epoch
         print('Waiting Test...')
@@ -94,4 +94,4 @@ if __name__ == '__main__':
     print('Train has finished, total epoch is %d' % EPOCH)
 
     dataframe = pd.DataFrame({'with': without})
-    dataframe.to_csv('withsenet.csv', index=False, sep=',')
+    dataframe.to_csv('withsenet256.csv', index=False, sep=',')
