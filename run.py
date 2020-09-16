@@ -1,4 +1,4 @@
-from senet import ResNet18
+from ghostnet import ResNet18
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
@@ -12,7 +12,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #set hyperparameter
 EPOCH = 50
 pre_epoch = 0
-BATCH_SIZE = 256
+BATCH_SIZE = 128
 LR = 0.01
 
 # data array
@@ -89,9 +89,9 @@ if __name__ == '__main__':
                 total += labels.size(0)
                 correct += (predicted == labels).sum()
             print('Test\'s ac is: %.3f%%' % (100. * float(correct) / total))
-            without.append((100 * correct / total))
+            without.append((100. * float(correct) / total))
 
     print('Train has finished, total epoch is %d' % EPOCH)
 
     dataframe = pd.DataFrame({'with': without})
-    dataframe.to_csv('withsenet256.csv', index=False, sep=',')
+    dataframe.to_csv('withghost.csv', index=False, sep=',')
