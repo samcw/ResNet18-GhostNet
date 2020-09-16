@@ -1,4 +1,4 @@
-from ghostnet import ResNet18
+from resnet18 import ResNet18
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
@@ -94,4 +94,4 @@ if __name__ == '__main__':
     print('Train has finished, total epoch is %d' % EPOCH)
 
     dataframe = pd.DataFrame({'with': without})
-    dataframe.to_csv('withghost.csv', index=False, sep=',')
+    dataframe.to_csv('withoutghost.csv', index=False, sep=',')
