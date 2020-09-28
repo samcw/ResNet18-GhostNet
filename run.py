@@ -1,4 +1,4 @@
-from senet import ResNet18
+from ecanet import ResNet18
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
@@ -94,4 +94,4 @@ if __name__ == '__main__':
     print('Train has finished, total epoch is %d' % EPOCH)
 
     dataframe = pd.DataFrame({'with': without})
-    dataframe.to_csv('withall.csv', index=False, sep=',')
+    dataframe.to_csv('withGhostEcanet.csv', index=False, sep=',')

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f50b77c3-146b-4fe6-9a3d-6efa90206bdb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ecanet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res.png" beforeDir="false" afterPath="$PROJECT_DIR$/res.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/senet.py" beforeDir="false" afterPath="$PROJECT_DIR$/senet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,7 +67,9 @@
       <workItem from="1599987565290" duration="843000" />
       <workItem from="1600065974242" duration="181000" />
       <workItem from="1600070202376" duration="13015000" />
-      <workItem from="1600241450088" duration="1018000" />
+      <workItem from="1600241450088" duration="6960000" />
+      <workItem from="1600303847154" duration="1224000" />
+      <workItem from="1601296924026" duration="1211000" />
     </task>
     <servers />
   </component>
