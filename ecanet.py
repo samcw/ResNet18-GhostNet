@@ -66,11 +66,11 @@ class ResidualBlock(nn.Module):
         self.left = nn.Sequential(
             # nn.Conv2d(inchannel, outchannel, kernel_size=3, stride=stride, padding=1, bias=False),
             GhostModule(inchannel, outchannel, kernel_size=3, stride=stride),
-            nn.BatchNorm2d(outchannel),
-            nn.ReLU(inplace=True),
+            # nn.BatchNorm2d(outchannel),
+            # nn.ReLU(inplace=True),
             # nn.Conv2d(outchannel, outchannel, kernel_size=3, stride=1, padding=1, bias=False),
             GhostModule(outchannel, outchannel, kernel_size=3, stride=1),
-            nn.BatchNorm2d(outchannel),
+            # nn.BatchNorm2d(outchannel),
             # add eca_layer
             eca_layer(outchannel, k_size)
         )
@@ -79,7 +79,7 @@ class ResidualBlock(nn.Module):
             self.shortcut = nn.Sequential(
                 # nn.Conv2d(inchannel, outchannel, kernel_size=1, stride=stride, bias=False),
                 GhostModule(inchannel, outchannel, kernel_size=1, stride=stride),
-                nn.BatchNorm2d(outchannel)
+                # nn.BatchNorm2d(outchannel)
             )
 
     def forward(self, x):
