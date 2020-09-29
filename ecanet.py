@@ -69,7 +69,7 @@ class ResidualBlock(nn.Module):
             # nn.BatchNorm2d(outchannel),
             # nn.ReLU(inplace=True),
             # nn.Conv2d(outchannel, outchannel, kernel_size=3, stride=1, padding=1, bias=False),
-            GhostModule(outchannel, outchannel, kernel_size=3, stride=1),
+            GhostModule(outchannel, outchannel, kernel_size=3, stride=1, relu=False),
             # nn.BatchNorm2d(outchannel),
             # add eca_layer
             eca_layer(outchannel, k_size)
@@ -78,7 +78,7 @@ class ResidualBlock(nn.Module):
         if stride != 1 or inchannel != outchannel:
             self.shortcut = nn.Sequential(
                 # nn.Conv2d(inchannel, outchannel, kernel_size=1, stride=stride, bias=False),
-                GhostModule(inchannel, outchannel, kernel_size=1, stride=stride),
+                GhostModule(inchannel, outchannel, kernel_size=1, stride=stride, relu=False),
                 # nn.BatchNorm2d(outchannel)
             )
 
